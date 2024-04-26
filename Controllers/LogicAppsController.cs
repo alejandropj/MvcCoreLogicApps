@@ -15,5 +15,14 @@ namespace MvcCoreLogicApps.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Index
+            (string email, string asunto,string mensaje)
+        {
+            await this.service.SendEmailAsync(email, asunto, mensaje);
+            ViewData["MENSAJE"] = "Procesando Email Logic Apps";
+            return View();
+        }
     }
 }

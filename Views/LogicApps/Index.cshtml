@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-primary">Logic Apps Azure</h1>
+
+<form method="post">
+    <label>To:</label>
+    <input type="text" name="email" class="form-control" />
+    <label>Subject</label>
+    <input type="text" name="asunto" class="form-control" />    
+    <label>Mensaje</label>
+    <textarea name="mensaje" class="form-control"></textarea>
+    <button class="btn btn-info">Send mail</button>
+</form>
+<h2 class="text-danger">@ViewData["MENSAJE"]</h2>
